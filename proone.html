@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,400;9..144,500;9..144,700&family=Inter:wght@400;800&family=Montserrat&family=Outfit:wght@500&family=Work+Sans:wght@500&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+
+
+        }
+
+        body {
+            font-size: 16px;
+        }
+
+        .container {
+            background-color: hsl(36, 100%, 99%);
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+            /* margin: 50px auto; */
+        }
+
+        nav {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 50px;
+            position: relative;
+
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            visibility: inherit;
+            position: absolute;
+            top: 65%;
+            right: 0;
+            
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            padding-left: 30px;
+
+
+        }
+
+        .navbar ul li a {
+
+            text-decoration: none;
+            color: hsl(236, 13%, 42%);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .img2 {
+            visibility: hidden;
+        }
+
+        .closeimg {
+            visibility: hidden;
+        }
+
+        main {
+            width: 80%;
+            /* height: 100%; */
+            padding-top: 30px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            row-gap: 20px;
+            column-gap: 20px;
+            padding-bottom: 50px;
+        }
+
+        main p {
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .item1 {
+            grid-column: 1/3;
+        }
+
+        .item1 img {
+            max-width: 100%;
+            height: 240px;
+            width: 100%;
+        }
+
+        .item2 {
+            grid-column: 3/4;
+            grid-row: 1/3;
+            width: auto;
+            background-color: hsl(240, 100%, 5%);
+            height: 440px;
+            padding: 20px 15px;
+        }
+
+        .item2 h1 {
+            color: hsl(35, 77%, 62%);
+        }
+
+        .item2 h3 {
+            color: white;
+            padding-bottom: 10px;
+            margin-top: 25px;
+        }
+
+        .item2 p {
+            color: hsl(233, 8%, 79%);
+            margin-bottom: 30px;
+            padding: 0px;
+            font-size: 15px;
+        }
+
+        .item3 {
+            grid-row: 2/3;
+            grid-column: 1/2;
+            width: auto;
+            height: auto;
+            font-size: 1.5rem;
+        }
+
+        .item4 {
+            /* grid-column: 6/7; */
+            grid-row: 2/3;
+            color: hsl(233, 8%, 79%);
+
+
+        }
+
+        .item4 button {
+            width: 150px;
+            margin-top: 1.5em;
+            height: 40px;
+            margin-left: 20px;
+            background-color: hsl(5, 85%, 63%);
+            color: white;
+
+        }
+
+        .item5 {
+            display: flex;
+            grid-row: 3/4;
+        }
+
+        .item5 h1,
+        p {
+            color: hsl(233, 8%, 79%);
+            padding-left: 20px;
+
+        }
+
+        .item5 h3 {
+            padding-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .item6 {
+            display: flex;
+            grid-row: 3/4;
+        }
+
+        .item6 h1,
+        p {
+            color: hsl(233, 8%, 79%);
+            padding-left: 20px;
+        }
+
+        .item6 h3 {
+            padding-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+.item5 img,.item6 img, .item7 img{
+ height: 60%;
+}
+        .item7 {
+            display: flex;
+
+            grid-row: 3/4;
+        }
+
+        .item7 h1,
+        p {
+            color: hsl(233, 8%, 79%);
+            padding-left: 20px;
+        }
+
+        .item7 h3 {
+            padding-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width:900px) {
+            nav {
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+            }
+            
+
+            .navbar ul {
+                position: absolute;
+                visibility: hidden;
+                top: 15%;
+                padding: 0px;
+            }
+            .navbar{
+                
+                transition-duration: 1s;
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 0;
+                border: 2px solid rgba(255, 255, 255, 0.925);
+                background-color: rgb(255, 255, 255);
+            }
+
+            .img2 {
+                visibility: visible;
+
+            }
+
+            .navbar2 {
+              
+                transition-duration: 1s;
+                width: 50vw;
+
+            }
+
+            .navbar2 .closeimg {
+                visibility: visible;
+                margin-left: 50px;
+                margin-top: 40px;
+                width: 20px;
+                margin-bottom: 20px;
+            }
+
+            .navbar2 .img2 {
+                visibility: hidden;
+            }
+.navbar2 ul li{
+    transform: translate(-5%);
+transition:  1s;
+                visibility: visible;
+
+}
+            .navbar ul li{
+
+                width: 50vw;
+                /* visibility: visible; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                line-height: 40px;
+            }
+
+            .navbar2 a {
+                font-weight: 700;
+                display: inline-block;
+                text-decoration: underline;
+            }
+
+           
+            .navbar2 a:hover{
+                padding: 0px 30px;
+                background-color: rgba(255, 115, 0, 0.479);
+                font-weight: 500;
+                color: white;
+            }
+
+
+
+            main {
+                width: 90%;
+                margin: auto;
+                height: auto;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+            }
+
+            .item1 {
+                grid-column: 1/2;
+            }
+
+            main p {
+                font-size: 20px;
+            }
+
+            .item1 img {
+                width: 100%;
+                content: url('image-web-3-mobile.jpg');
+                height: auto;
+
+            }
+
+            .item3 {
+                grid-row: 2/3;
+                grid-column: 1/2;
+            }
+
+            .item4 {
+                grid-row: 3/4;
+                padding-left: px;
+                padding-top: 10px;
+            }
+
+            .item4 button {
+                width: 60%;
+                height: 60px;
+                font-size: 30px;
+                text-transform: uppercase;
+            }
+
+            .item2 {
+                grid-row: 4/5;
+                grid-column: 1/2;
+                margin-bottom: 20px;
+            }
+
+            .item5 img,
+            .item6 img,
+            .item7 img {
+                height: 200px;
+                width: 130px;
+                padding-top: 10px;
+            }
+
+            .item5 {
+                grid-row: 5/6;
+                margin-bottom: 20px;
+            }
+
+            .item6 {
+                grid-row: 6/7;
+                margin-bottom: 20px;
+            }
+
+            .item7 {
+                grid-row: 7/8;
+                margin-bottom: 20px;
+            }
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="logo.svg" alt="">
+
+            <div class="navbar">
+                <img class="closeimg" src="icon-menu-close.svg" alt="">
+                <ul>
+
+                    <li><a href="">Home</a></li>
+                    <li><a href="">New</a></li>
+                    <li><a href="">Popular</a></li>
+                    <li><a href="">Trending</a></li>
+                    <li><a href="">Categories</a></li>
+
+                </ul>
+
+            </div>
+            <img class="img2" src="icon-menu.svg" alt="">
+
+        </nav>
+
+        <main>
+            <div class="item1"><img src="image-web-3-desktop.jpg" alt=""></div>
+            <div class="item2">
+                <h1>New</h1>
+                <h3>Hydrogen VS Electric Cars</h3>
+                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                <hr>
+                <h3>The Downsides of AI Artistry</h3>
+                <p> What are the possible adverse effects of on-demand AI image generation?</p>
+                <hr>
+                <h3>Is VC Funding Drying Up? </h3>
+                <p>Private funding by VC firms is down 50% YOY. We take a look at what that means. </p>
+            </div>
+            <div class="item3">
+                <h1>The Bright Future Of Web 3.0</h1>
+            </div>
+            <div class="item4">
+                <p>We dive into the next evolution of the web that claims to put the power of the platforms back into
+                    the hands of the people. But is it really fulfilling its promise? </p> <br><button>Read
+                    More</button>
+            </div>
+            <div class="item5"><img src="image-retro-pcs.jpg" alt="">
+                <div>
+                    <h1>01</h1>
+                    <h3>Reviving Retro Pcs</h3>
+                    <p>What happens when old PCs are given modern upgrades?</p>
+                </div>
+            </div>
+            <div class="item6"><img src="image-top-laptops.jpg" alt="">
+                <div>
+                    <h1>02</h1>
+                    <h3>Top 10 Laptops of 2022</h3>
+                    <p>Our best picks for various needs and budgets.</p>
+                </div>
+            </div>
+            <div class="item7"><img src="image-gaming-growth.jpg" alt="">
+                <div>
+                    <h1>03</h1>
+                    <h3>The Growth of Gaming</h3>
+                    <p> How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        let imageOpen = document.querySelector('.img2');
+        imageOpen.addEventListener('click', function () {
+            let navigat = document.querySelector('.navbar');
+            navigat.classList.add('navbar2');
+        })
+        let imageclose = document.querySelector('.closeimg');
+        imageclose.addEventListener('click', function () {
+            let navigate = document.querySelector('.navbar');
+            navigate.classList.remove('navbar2');
+        }
+        )
+    </script>
+</body>
+
+</html>
